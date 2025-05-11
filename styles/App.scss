@@ -1,0 +1,33 @@
+@use "./index" as *;
+
+.modal-content {
+  border: none;
+  background-color: transparent;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
+.btn.show {
+  background-color: #e7e4e4 !important;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  display: none !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4e4e4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #939494;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}

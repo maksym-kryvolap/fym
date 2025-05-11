@@ -1,0 +1,121 @@
+@use "../utils/variables" as *;
+
+.filter {
+  z-index: 2;
+  opacity: 0;
+
+  &__category {
+    &-btn {
+      height: 30px;
+      width: 30px;
+      border: 1px solid $color-shadow;
+      border-radius: 50%;
+      background-color: #e7e4e4;
+      transition: all 0.4s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $color-hover;
+        }
+      }
+
+      &-icon {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
+    &-container {
+      box-shadow: 3px 3px 8px $color-shadow;
+      background: rgb(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px) !important;
+      will-change: filter;
+      width: 180px;
+      top: 32px;
+      right: 0 !important;
+      z-index: 2;
+      border: 1px solid $color-shadow;
+      transition: all 0.4s ease-in-out;
+      will-change: opacity, transform;
+      height: 250px;
+      overflow-y: scroll;
+    }
+
+    &-name {
+      border: none;
+      background-color: transparent;
+      color: #cfcaca;
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+
+  &__sort {
+    &-btn {
+      height: 30px;
+      width: 30px;
+      border: 1px solid $color-shadow;
+      border-radius: 50%;
+      background-color: #e7e4e4;
+      transition: all 0.4s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $color-hover;
+        }
+      }
+
+      &-icon {
+        height: 15px;
+        width: 15px;
+      }
+    }
+
+    &-container {
+      box-shadow: 3px 3px 8px $color-shadow;
+      background: rgb(0, 0, 0, 0.4);
+      backdrop-filter: blur(20px) !important;
+      width: 180px;
+      top: 32px;
+      right: 0 !important;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(5px);
+      border: 1px solid rgb(209, 208, 208);
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  &__togle {
+    width: 152px;
+    height: 22px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(178, 234, 241);
+    border: 1px solid rgb(14, 17, 243);
+    box-sizing: border-box;
+
+    &-btn {
+      font-size: 10px;
+      background: transparent;
+      height: 18px;
+      width: 50px;
+      border-radius: 15px;
+      line-height: 18px;
+    }
+
+    &-togler {
+      width: 50px;
+      height: 18px;
+      transition: all 0.2s ease-in-out;
+      border-radius: 15px;
+      border: 1px solid rgb(12, 8, 238);
+      background: rgb(10, 74, 194, 0.2);
+    }
+  }
+}

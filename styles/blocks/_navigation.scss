@@ -1,0 +1,36 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.navigation {
+  height: 50px !important;
+  box-shadow: 1px 1px 8px $color-shadow, -1px 1px 8px $color-shadow !important;
+  background: rgb(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+
+  &__mobile {
+    box-shadow: 3px 3px 8px #f09c57 !important;
+    background: rgb(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(20px) !important;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../../assets/mobileMenuIcon.png");
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.offcanvas-backdrop {
+  @include screen-md {
+    opacity: 0!important;
+  }
+}

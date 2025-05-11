@@ -1,0 +1,104 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+.skeleton {
+  &__favorites {
+    &-card {
+      background-color: rgb(255, 255, 255, 0.2);
+      box-shadow: 2px 2px 8px $color-shadow;
+    }
+
+    &-img {
+      width: 100%;
+      padding-top: 150%;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #838282 25%, #a09d9d 50%, #838282 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer-position 2.2s infinite linear;
+    }
+
+    &-line {
+      height: 16px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #a39f9f 25%, #8b8787 50%, #e0e0e0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-shimmer 0.2s infinite linear;
+    }
+
+    &-title {
+      width: 70%;
+      height: 18px;
+    }
+  }
+
+  &-card {
+    overflow: hidden;
+    min-height: 75vh !important;
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 1px 1px 8px $color-shadow;
+    border-radius: 20px;
+    animation: skeleton-showing 1s ease forwards;
+
+    @include screen-md {
+      min-height: 50vh !important;
+    }
+  }
+
+  &-img {
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(90deg, #838282 25%, #a09d9d 50%, #838282 75%);
+    border-radius: 10px;
+    background-size: 200% 100%;
+    animation: skeleton-shimmer-position 2.2s infinite linear;
+
+    @include screen-sm {
+      width: 250px;
+      height: 300px;
+    }
+    @include screen-md {
+      width: 220px;
+      height: 350px;
+    }
+  }
+
+  &-line {
+    height: 16px;
+    background: #1a1919;
+    border-radius: 4px;
+    animation: skeleton-shimmer 1.5s infinite linear;
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-color: #e2e2e2;
+  }
+  50% {
+    background-color: #d0d0d0;
+  }
+  100% {
+    background-color: #e2e2e2;
+  }
+}
+
+@keyframes skeleton-shimmer-position {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes skeleton-showing {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

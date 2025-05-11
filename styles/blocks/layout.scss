@@ -1,0 +1,52 @@
+.layout {
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(15px);
+    filter: blur(15px);
+    transform: scale(1.1);
+
+    &-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+  }
+
+  &__brightness {
+    bottom: 20px;
+    right: 20px;
+
+    &-input {
+      writing-mode: vertical-lr;
+      direction: rtl;
+      width: 6px;
+      height: 100px;
+
+      &.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &-button {
+      border: 1px solid rgb(25, 103, 219);
+      height: 36px;
+      width: 36px;
+      padding-top: 1px;
+    }
+  }
+}

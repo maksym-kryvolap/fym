@@ -1,0 +1,33 @@
+{
+  "name": "my-movies1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "node generateSitemap.js && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
+    "axios": "^1.8.4",
+    "bootstrap": "^5.3.5",
+    "file-saver": "^2.0.5",
+    "gsap": "^3.12.7",
+    "next": "^15.3.2",
+    "react": "18",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "18",
+    "react-redux": "^9.2.0",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.86.3",
+    "sitemap": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
