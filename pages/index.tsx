@@ -187,7 +187,7 @@ const HomePage = () => {
   return (
     <>
       <Head>
-        <title>FYM - Find you movie</title>
+        <title>FYM - Find your movie</title>
         <meta
           name="description"
           content="Find and discover your favorite movies with ease."
